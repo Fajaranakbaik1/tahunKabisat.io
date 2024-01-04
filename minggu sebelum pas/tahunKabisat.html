@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    
+    <script>
+
+        const tahunAwal = 1600;
+        const tahunAkhir = 2024;
+
+
+        //tahun kabisat dan bukan tahun kabisat
+        // for (let tahun = tahunAwal; tahun <= tahunAkhir; tahun++) {
+        //     let isLeap = (tahun % 4 === 0 && tahun % 100 !== 0) || (tahun % 400 === 0);
+
+        //     if (isLeap) {
+        //         console.log(`${tahun} adalah tahun kabisat.`);
+        //     } else {
+        //         console.log(`${tahun} bukan tahun kabisat.`);
+        //     }
+        // }
+
+
+        //hanya tahun kabisat saja
+        for (let year = 1600; year <= 2024; year += 4) {
+            if (year % 400 === 0) {
+                console.log(year + ' adalah tahun kabisat.');
+            } else if (year % 100 === 0) {
+                console.log(year + ' bukan tahun kabisat.');
+            } else if (year % 4 === 0) {
+                console.log(year + ' adalah tahun kabisat.');
+            } else {
+                console.log(year + ' bukan tahun kabisat.');
+            }
+        }
+
+    </script>
+</body>
+
+</html>

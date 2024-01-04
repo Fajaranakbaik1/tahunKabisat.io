@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        let VIP = 50;
+        let Eksekutif = 50;
+        let Ekonomi = 50;
+        let hasil = (VIP + Eksekutif + Ekonomi);
+
+        const hargaVip = 100000;
+        const hargaEksekutif = 50000;
+        const hargaEkonomi = 100000;
+
+        let untungVip = 0;
+        let untungEksekutif = 0;
+        let untungEkonomi = 0;
+
+        if (VIP >= 35) {
+            console.log("Keuntungan VIP 25%");
+            untungVip = hargaVip * 25/100;
+            console.log(untungVip); 
+        } else if (VIP >= 20 && VIP < 35) {
+            console.log("Keuntungan VIP 15%");
+        } else if (VIP < 20) {
+            console.log("Keuntungan VIP 5%");
+            console.log(VIP);
+        }
+
+        if (Eksekutif >= 40) {
+            console.log("Keuntungan Eksekutif 20%");
+            untungEksekutif = hargaEksekutif * 20/100;
+            console.log(untungEksekutif);  
+        } else if (Eksekutif >= 20 && Eksekutif < 40) {
+            console.log("Keuntungan Eksekutif 10%");
+        } else if (Eksekutif < 20) {
+            console.log("Keuntungan Eksekutif 2%");
+            console.log(Eksekutif);
+        }
+
+        if (Ekonomi >= 35) {
+            console.log("Keuntungan Ekonomi 7%");
+            untungEkonomi = hargaEkonomi * 7/100;
+            console.log(untungEkonomi); 
+        } else {
+            console.log("Keuntungan Ekonomi 0%");
+            console.log(Ekonomi);
+        }
+
+        let Provitall = (untungEkonomi + untungEksekutif + untungVip);
+        console.log("Total Keuntungan: " + Provitall);
+
+        console.log("Total Tiket: " + hasil);
+
+    </script>
+</body>
+</html>
